@@ -1,3 +1,4 @@
+Tyler Hoang
 # Answers
 
 1. I would put my automated tests within a GitHub action that runs whenever the code is pushed. Although we SHOULD run the tests prior to pushing, to make it easier to solve issues prior to pushing and waiting for Github actions to set up its environment and run, it is more important that we have publicly viewable and automatically running tests on any pull requests, etc., that way we can see if the code is up to quality standards in a convenient place prior to merging.

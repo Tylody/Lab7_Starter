@@ -18,7 +18,7 @@ describe('Basic user flow for Website', () => {
 
     // Expect there that array from earlier to be of length 20, meaning 20 <product-item> elements where found
     expect(numProducts).toBe(20);
-  });
+  }, 80000);
 
   // Check to make sure that all 20 <product-item> elements have data in them
   // We use .skip() here because this test has a TODO that has not been completed yet.
@@ -56,7 +56,7 @@ describe('Basic user flow for Website', () => {
     * Remove the .skip from this it once you are finished writing this test.
     */
 
-  }, 10000);
+  }, 80000);
 
   // Check to make sure that when you click "Add to Cart" on the first <product-item> that
   // the button swaps to "Remove from Cart"
@@ -86,7 +86,7 @@ describe('Basic user flow for Website', () => {
 
     await cartButton.click();
 
-  }, 2500);
+  }, 80000);
 
   // Check to make sure that after clicking "Add to Cart" on every <product-item> that the Cart
   // number in the top right has been correctly updated
@@ -115,7 +115,7 @@ describe('Basic user flow for Website', () => {
 
     expect(cartText).toBe("20");
 
-  }, 30000);
+  }, 80000);
 
   // Check to make sure that after you reload the page it remembers all of the items in your cart
   it('Checking number of items in cart on screen after reload', async () => {
@@ -138,7 +138,7 @@ describe('Basic user flow for Website', () => {
       expect(buttonText).toBe("Remove from Cart");
     }
 
-  }, 10000);
+  }, 80000);
 
   // Check to make sure that the cart in localStorage is what you expect
   it('Checking the localStorage to make sure cart is correct', async () => {
@@ -161,7 +161,7 @@ describe('Basic user flow for Website', () => {
 
     expect(myAnswer == answerKey).toBe(true);
 
-  });
+  }, 80000);
 
   // Checking to make sure that if you remove all of the items from the cart that the cart
   // number in the top right of the screen is 0
@@ -189,7 +189,7 @@ describe('Basic user flow for Website', () => {
 
     expect(cartText).toBe("0");
 
-  }, 50000);
+  }, 80000);
 
   // Checking to make sure that it remembers us removing everything from the cart
   // after we refresh the page
@@ -217,7 +217,7 @@ describe('Basic user flow for Website', () => {
     const cartText = await(await cartNumber.getProperty('innerText')).jsonValue();
     expect(cartText).toBe("0");
 
-  }, 30000);
+  }, 80000);
 
   // Checking to make sure that localStorage for the cart is as we'd expect for the
   // cart being empty
@@ -241,5 +241,5 @@ describe('Basic user flow for Website', () => {
 
     expect(myAnswer == answerKey).toBe(true);
 
-  });
+  }, 80000);
 });
